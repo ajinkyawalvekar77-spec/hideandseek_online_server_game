@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Hide & Seek – Torch</title><link rel="stylesheet" href="style.css"></head><body>
+<canvas id="cv"></canvas>
+<div id="hud" hidden><span id="h1"></span><span id="h2"></span><span id="h3"></span></div>
+<div id="toast"></div>
+<div id="help" hidden>WASD / arrows move · mouse aims · SPACE = hit a seeker from behind</div>
+<button id="hitbtn" hidden>HIT</button>
+
+<div id="menu" class="card">
+  <h1>🔦 Hide &amp; Seek</h1>
+  <input id="name" placeholder="Your name" maxlength="14">
+  <h3>Create a team</h3>
+  <input id="team" placeholder="Team name" maxlength="20">
+  <label><input type="checkbox" id="pub" checked> Show in public team directory</label>
+  <button id="create">Create team</button>
+  <h3>Join with code</h3>
+  <div class="row"><input id="code" placeholder="CODE" maxlength="5"><button id="join">Join</button></div>
+  <h3>Public teams <button id="refresh" class="small">↻</button></h3>
+  <div id="dir"></div>
+  <p id="err" class="err"></p>
+</div>
+
+<div id="lobby" class="card" hidden>
+  <h1>Team code: <span id="lcode"></span></h1>
+  <p id="lmsg" class="big"></p>
+  <ul id="plist"></ul>
+  <p class="hint">Click your role button to switch. Host starts the game.</p>
+  <button id="start">Start game</button> <button id="leave" class="small">Leave</button>
+  <p id="lerr" class="err"></p>
+</div>
+<script src="config.js"></script><script src="map.js"></script><script src="game.js"></script>
+</body></html>
